@@ -1,0 +1,25 @@
+:root {
+    --text-color: #630529;
+    --link-color: #A53860;
+    --background-color: #fff3e7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none; /* only if you don't want links to be underlined */
+    color: var(--link-color);
+}
