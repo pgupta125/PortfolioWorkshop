@@ -1,7 +1,7 @@
 :root {
-    --text-color: #630529;
-    --link-color: #A53860;
-    --background-color: #fff3e7;
+    --text-color: #1b191a;
+    --link-color: #3d603b;
+    --background-color: #d8e9d8;
 }
 
 * {
@@ -17,9 +17,61 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    color: var(--text-color); /* check to see if you want to remove this later */
 }
 
 a {
     text-decoration: none; /* only if you don't want links to be underlined */
     color: var(--link-color);
+}
+
+/* NAVBAR */
+nav {
+    display: flex; /* puts everything in the nav div in one line */
+    justify-content: space-between; /* space btwn L & R divs */
+    padding: 0 50px; /* 0 is y-axis, 50 is x */ 
+    height: 80px; /* could do padding for y, but setting height will keep height fixed */
+    align-items: center; /* to make sure elements come down with the height */
+}
+
+nav .left a {
+    color: var(--text-color); /* so it's not the link color */
+    font-size: 22px;
+    font-weight: 600; /* using 400 & 600 fron gfonts, so putting 600 here */
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child { /* last link only (email) to create a box */
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span { /* to create space between icon & text */
+    margin-left: 5px;
+}
+
+@media (max-width: 600px) { /* any style changes made here only affect the site when it is <600px */
+    /* NAVBAR */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a span {
+        display: none; /* remove text labels */
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+    }
 }

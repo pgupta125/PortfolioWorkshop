@@ -1,5 +1,6 @@
 # PortfolioWorkshop
-CSSA wWorkshop to build a basic CSS and HTML Portfolio
+CSSA Workshop to build a basic CSS and HTML Portfolio
+(Responsive to most devices!)
 
 Google Fonts: https://fonts.google.com 
 FontAwesome: https://fontawesome.com 
