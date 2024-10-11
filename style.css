@@ -56,6 +56,56 @@ nav .right a span { /* to create space between icon & text */
     margin-left: 5px;
 }
 
+/* SECTION 1: HERO */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px; /* so text doesn't go all the way to the end */
+    margin: 50px 0; /* for space btwn navbar and hero */
+    align-items: center; 
+    margin-bottom: 100px; /* for space btwn hero and next section */
+    gap: 40px; /* btwn text and headshot */
+}
+
+.hero-section .text {
+    flex: 5; /* like a ratio, will have 5:7 in spacing */
+}
+
+.hero-section .text h2 {
+    font-size: 45px;
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block; /* to make sure icons don't separate from their text */
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.hero-section .text .links a:hover{ /* link change color when hovered over */
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero-section .headshot {
+    flex: 2; /* 2:7 in spacing (7is total, 5+2) */
+    display: flex; /* makes content stay to the right when zoom in/out */
+    justify-content: right; /* content to right */
+}
+
+.hero-section .headshot img {
+    border-radius: 50%;
+    width: 350px;
+    border: 2px solid var(--link-color)
+}
+
 @media (max-width: 600px) { /* any style changes made here only affect the site when it is <600px */
     /* NAVBAR */
     nav {
@@ -73,5 +123,25 @@ nav .right a span { /* to create space between icon & text */
     nav .right a:last-child {
         color: var(--text-color);
         background-color: transparent;
+    }
+
+    /* SECTION 1: HERO */
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    /* SECTION 1: HERO */
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 300px;
     }
 }
