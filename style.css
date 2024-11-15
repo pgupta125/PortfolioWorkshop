@@ -17,7 +17,9 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    color: var(--text-color); /* check to see if you want to remove this later */
+    color: var(--text-color);
+    max-width: 1400px; /* max width of the page when zooming out*/
+    margin: 0 auto; /* center the page when zoomed out*/
 }
 
 a {
@@ -106,6 +108,74 @@ nav .right a span { /* to create space between icon & text */
     border: 2px solid var(--link-color)
 }
 
+/* SECTION 2: SKILLS */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* SECTION 5: CONTACT */
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text{
+    flex: 3;
+}
+
+.contact-section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none; /* removes the deafult colored (blue) outline when clicked on */
+    resize: none; /* doesn't allow user to resize the text area */
+    border-radius: 5px;
+}
+
+.contact-section .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color:#d8e9d8;
+    background-color: var(--link-color);
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover {
+    filter:brightness(.90);
+}
+
+
 @media (max-width: 600px) { /* any style changes made here only affect the site when it is <600px */
     /* NAVBAR */
     nav {
@@ -133,9 +203,24 @@ nav .right a span { /* to create space between icon & text */
     .hero-section .text h2 {
         font-size: 30px;
     }
+
+    /* SECTION 2: SKILLS */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section h2 {
+        font-size: 30px;
+    }
+
+    /* SECTION 5: CONTACT */
+    .contact-section {
+        padding: 0 20px;
+    }
+
 }
 
-@media (max-width: 850px) {
+@media (max-width: 740px) {
     /* SECTION 1: HERO */
     .hero-section {
         flex-direction: column-reverse;
@@ -144,4 +229,18 @@ nav .right a span { /* to create space between icon & text */
     .hero-section .headshot img {
         width: 300px;
     }
+
+    /* SECTION 5: CONTACT */
+    .contact-section .group {
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 850px) {
+    /* SECTION 1: HERO */
+    .hero-section .text h2 {
+        font-size: 35px;
+      }
+    
 }
