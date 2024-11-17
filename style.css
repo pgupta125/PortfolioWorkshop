@@ -113,14 +113,136 @@ nav .right a span { /* to create space between icon & text */
     padding: 0 50px;
     margin-bottom: 100px;
 }
+
 .skills-section h2 {
     text-align: center;
     font-size: 35px;
 }
-.skills-section .text {
-    text-align: center;
-    margin-bottom: 20px;
+
+.skills-section .text .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.skills-section .text .cells .cell {
+    width: flex;
+    height: flex;
+    padding: 2px 20px;
+    background-color: var(--link-color);
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-section .text .cells .cell span {
+    font-size: 20px;
+    color: var(--background-color);
+}
+
+    /*tooltip*/
+    .skills-section .text .cells .cell .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+  
+    .skills-section .text .cells .cell .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--text-color);
+        color: var(--background-color);
+        text-align: center;
+        padding: 10px 20px;
+        border-radius: 5px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -100px; /*half of width*/
+        margin-top: 15px;
+        z-index: 1; /*stacks toolitptext over tooltip*/
+        opacity: 0; /*fade in*/
+        transition: opacity .3s; /*fade in*/
+    }
+
+    .skills-section .text .cells .cell .tooltip:hover .tooltiptext {
+        visibility: visible; /*show tooltip text on hover*/
+        opacity: 1; /*fade in*/
+    }
+
+    /* for the little arrow above it */
+    .skills-section .text .cells .cell .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -20px;
+        margin-bottom: -5px;
+        border-width: 20px;
+        border-style: solid;
+        border-color: transparent transparent var(--text-color) transparent;
+      }
+
+/* SECTION 3: EXPERIENCE */
+.experience-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.experience-section h2 {
+    text-align: left;
+    font-size: 35px;
+}
+
+.experience-section .text .cell {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience-section .text .cell .cellLeft {
+    justify-content: left;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.experience-section .text .cell .cellRight {
+    justify-content: right;
+    text-align: right;
+    padding-bottom: 20px;
+}
+
+/* SECTION 4: PROJECTS */
+.projects-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.projects-section h2 {
+    text-align: left;
+    font-size: 35px;
+}
+
+/* .projects-section .text .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects-section .text .cells .cell {
+    width: flex;
+    height: flex;
+    padding: 2px 20px;
+    background-color: var(--link-color);
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects-section .text .cells .cell span {
+    font-size: 20px;
+    color: var(--background-color);
+} */
+
 
 /* SECTION 5: CONTACT */
 .contact-section {
