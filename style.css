@@ -119,6 +119,10 @@ nav .right a span { /* to create space between icon & text */
     font-size: 35px;
 }
 
+.skills-section .text p {
+    text-align: center;
+}
+
 .skills-section .text .cells {
     display: flex;
     justify-content: center;
@@ -194,25 +198,68 @@ nav .right a span { /* to create space between icon & text */
     font-size: 35px;
 }
 
-.experience-section .text .cell {
+.experience-section .text {
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.experience-section .text .cell .cellLeft {
-    justify-content: left;
-    text-align: left;
-    padding-bottom: 20px;
+.experience-section .text .timeline {
+    margin: 0 auto;
+    /* max-width: 900px; use if you want to limit the width of the timeline*/
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr; /*creates 2 equal width columns and some space between them*/
+
 }
 
-.experience-section .text .cell .cellRight {
-    justify-content: right;
+.experience-section .text .timeline .timeline-component {
+    margin: 0 20px 20px 20px;
+}
+
+.experience-section .text .timeline .timeline-component .timeline-date-right {
     text-align: right;
-    padding-bottom: 20px;
+}
+
+.experience-section .text .timeline .timeline-middle {
+    position: relative;
+    background: var(--link-color);
+}
+
+.experience-section .text .timeline .timeline-middle .timeline-point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /*centers the point*/
+    width: 15px;
+    height: 15px;
+    background-color: var(--link-color);
+    border-radius: 50%; /*to make it round*/
+}
+
+.experience-section .text .timeline .timeline-middle .timeline-point-last {
+    top: initial;
+    bottom: 0;
+}
+
+.experience-section .text .timeline .timeline-component .timeline-component-bg {
+    padding: 1.5em; /*1.5x current font size*/
+    background: #dce8dc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.experience-section .timeline-component .timeline-component-bg .timeline-title {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.experience-section .timeline-component .timeline-component-bg .timeline-pg {
+    line-height: 1.5;
 }
 
 /* SECTION 4: PROJECTS */
-.projects-section {
+/* .projects-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
@@ -221,9 +268,8 @@ nav .right a span { /* to create space between icon & text */
     font-size: 35px;
 }
 
-/* .projects-section .text .cells {
+.projects-section .text .cells {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -335,6 +381,24 @@ nav .right a span { /* to create space between icon & text */
         font-size: 30px;
     }
 
+    /* SECTION 3: EXPERIENCE */
+    .experience-section {
+        padding: 0 20px;
+    }
+
+    .experience-section h2 {
+        font-size: 30px;
+    }
+
+    /* SECTION 4: PROJECTS */
+    .projects-section {
+        padding: 0 20px;
+    }
+
+    .projects-section h2 {
+        font-size: 30px;
+    }
+
     /* SECTION 5: CONTACT */
     .contact-section {
         padding: 0 20px;
@@ -363,6 +427,33 @@ nav .right a span { /* to create space between icon & text */
     /* SECTION 1: HERO */
     .hero-section .text h2 {
         font-size: 35px;
+    }
+
+    /* SECTION 3: EXPERIENCE */
+    .timeline-pg {
+        display: none;
       }
     
+      .openformore {
+        display: block;
+        color: var(--link-color);
+        cursor: pointer;
+        padding: 10px 0;
+        font-weight: bold;
+      }
+    
+      .openformore:hover {
+        opacity: 0.8;
+      }
+
 }
+
+@media screen and (min-width: 851px) {
+    .timeline-pg {
+      display: block;
+    }
+  
+    .openformore {
+      display: none;
+    }
+  }
