@@ -273,7 +273,7 @@
     </main>
 </body>
 
-<script src="config.js"></script>
+<!-- <script src="config.js"></script> -->
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -286,7 +286,8 @@
             Timestamp: new Date().toISOString()
         }];
 
-        fetch(config.SHEET_API_URL, {
+        // fetch(config.SHEET_API_URL, {
+        fetch("https://api.sheetbest.com/sheets/b023fd79-4a2b-4364-b48c-a09f5780eade", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
