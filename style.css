@@ -343,6 +343,21 @@ nav .right a span { /* to create space between icon & text */
     filter:brightness(.90);
 }
 
+@media (max-width: 450px){
+    main {
+        padding: 0 20px;
+    }
+
+    .timeline {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .experience-section h2 {
+        text-align: center;
+    }
+}
+
 
 @media (max-width: 600px) { /* any style changes made here only affect the site when it is <600px */
     /* NAVBAR */
